@@ -40,6 +40,7 @@ class BarangController extends Controller
     {
         //
         // dd($request->all());
+        $namafile = null;
         if ($request->hasFile('gambarbarang')) {
             # code...
             $file = $request->file('gambarbarang');
