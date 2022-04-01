@@ -84,6 +84,7 @@ class BarangController extends Controller
     public function edit(Barang $barang)
     {
         //
+        return view('manager.crud.barang.edit',['barang'=>$barang]);
     }
 
     /**
@@ -96,6 +97,32 @@ class BarangController extends Controller
     public function update(Request $request, Barang $barang)
     {
         //
+        $namafile = null;
+        if ($request->hasFile('gambarbarang')) {
+            # code...
+            if ($barang->gambarbarang != null) {
+                # code...
+                unlink('foto_produk/'.$barang->gambarbarang);
+            }
+            $file = $request->file('gambarbarang');
+            $namafile = time()."_".$file->getClientOriginalName();
+            $tujuanfile = 'foto_produk';
+            $file->move($tujuanfile,$namafile);
+        }
+        $data = $barang->update([
+            'namabarang'=>$request->namabarang,
+            'hargabarang'=>$request->hargabarang,
+            'ketersediaan'=>$request->ketersediaan,
+            'gambarbarang'=>$namafile,
+            'kategoribarang'=>$request->kategoribarang,
+            'deskripsibarang'=>$request->deskripsibarang,
+        ]);
+        if ($data) {
+            # code...
+            return redirect()->route('manager.barang.index')->with('success','Data Berhasil di Tambahkan');
+        }else{
+            return redirect()->route('manager.barang.index')->with('error','Data Gagal di Tambahkan');
+        }
     }
 
     /**

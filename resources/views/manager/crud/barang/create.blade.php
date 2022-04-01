@@ -34,8 +34,8 @@
         <label for="kategoribarang">Kategori : </label>
         <select class="form-control mb-3" id="kategoribarang" name="kategoribarang" required>
             <option selected value="">Kategori</option>
-            <option value="Makanan">Makanan</option>
-            <option value="Minuman">Minuman</option>
+            <option value="makanan">Makanan</option>
+            <option value="minuman">Minuman</option>
         </select>
         <small id="helpId" class="form-text text-muted">Ketersediaan Menu</small>
     </div>
