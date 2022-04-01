@@ -1,7 +1,7 @@
 @extends('manager.manager_master')
 @section('content')
 <h2>Tambah Data Menu</h2>
-<form method="POST" action="{{route('manager.barang.update',$baran->id)}}" enctype="multipart/form-data">
+<form method="POST" action="{{route('manager.barang.update',$barang->id)}}" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="form-group">
