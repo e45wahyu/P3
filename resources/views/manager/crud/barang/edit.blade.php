@@ -27,7 +27,7 @@
     </div>
     <div class="form-group">
         <label for="gambarbarang">Gambar Menu : </label>
-        <img src="{{ asset('foto_produk/'.$barang->gambarbarang) }}" alt="" style="width:20em;">
+        <img src="{{ asset('foto_produk/'.$barang->gambarbarang) }}" alt="" style="width:10em;">
         <input type="file" class="form-control" name="gambarbarang" id="gambarbarang" aria-describedby="helpId"
             placeholder="Gambar Menu" accept="image/*">
         <small id="helpId" class="form-text text-muted">Gambar Menu</small>
@@ -43,7 +43,7 @@
     </div>
     <div class="form-group">
         <label for="deskripsibarang">Deskripsi Menu : </label>
-        <textarea name="deskripsibarang" id="deskripsibarang" class="form-control" cols="30" rows="2" required></textarea>
+        <textarea name="deskripsibarang" id="deskripsibarang" class="form-control" cols="30" rows="2" required>{{ $barang->deskripsibarang }}</textarea>
         <small id="helpId" class="form-text text-muted">Deskripsi Menu</small>
     </div>
     
