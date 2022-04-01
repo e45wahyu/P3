@@ -16,12 +16,14 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('kodeorder');
-            $table->integer('quantity');
             $table->unsignedBigInteger('petugasid');
             $table->foreign('petugasid')->references('id')->on('users');
+            $table->unsignedBigInteger('barangid');
+            $table->foreign('barangid')->references('id')->on('barangs');
             $table->unsignedBigInteger('mejaid');
             $table->foreign('mejaid')->references('id')->on('mejas');
-            $table->string('totalharga');
+            $table->integer('quantity');
+            $table->string('totalbayar');
             $table->timestamps();
         });
     }

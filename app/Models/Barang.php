@@ -9,4 +9,6 @@ class Barang extends Model
 {
     use HasFactory;
     protected $table = 'barangs';
+    // protected $fillable = ['namabarang','hargabarang','ketersediaan','gambarbarang','kategoribarang','deskripsibarang'];
+    protected $guarded = [];
 }

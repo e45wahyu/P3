@@ -20,17 +20,17 @@ class UserSeeder extends Seeder
             [[
                 'name'=>'admin',
                 'email'=>'admin@admin.com',
-                'password'=>bcrypt('qwerty123'),
+                'password'=>bcrypt('password'),
                 'role'=>'admin'
             ],[
                 'name'=>'manager',
                 'email'=>'manager@manager.com',
-                'password'=>bcrypt('qwerty123'),
+                'password'=>bcrypt('password'),
                 'role'=>'manager'
             ],[
                 'name'=>'kasir',
                 'email'=>'kasir@kasir.com',
-                'password'=>bcrypt('qwerty123'),
+                'password'=>bcrypt('password'),
                 'role'=>'kasir'
             ],]
         );
