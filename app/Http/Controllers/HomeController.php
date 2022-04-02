@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Meja;
+use App\Models\Barang; 
 
 use Illuminate\Http\Request;
 
@@ -27,12 +29,13 @@ class HomeController extends Controller
         if (auth()->check()) {
             # code...
             if (auth()->user()->role == 'admin') {
-                # code...
+                # cod
                 return redirect('/admin/dashboard');
             }
             if (auth()->user()->role == 'manager') {
-            # code...
-            return redirect('/manager/dashboard');
+                $meja = Meja::count();
+                $barang = Barang::count();
+                return redirect('/manager/dashboard',);
             }
         }else {
             # code...

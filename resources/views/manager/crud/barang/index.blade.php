@@ -20,7 +20,7 @@
              <td>{{ $item->ketersediaan }}</td>
              <td>
                   <a href="{{ route('manager.barang.edit', $item->id) }}" class="btn btn-warning">Edit</a>
-                  <form action="{{ route('manager.barang.destroy', $item->id) }}" method="POST" class="d-inline">
+                  <form action="{{ route('manager.barang.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin Ingin Hapus?')">
                      @method('delete')
                      @csrf
                      <button type="submit" class="btn btn-danger">Delete</button>

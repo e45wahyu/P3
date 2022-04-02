@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
+use App\Models\Barang;
+use App\Models\Meja;
 use Illuminate\Http\Request;
 
 class DashboardContoller extends Controller
@@ -15,7 +17,9 @@ class DashboardContoller extends Controller
     public function index()
     {
         //
-        return view('manager.dashboard.index');
+        $meja = Meja::count();
+        $barang = Barang::count();
+        return view('manager.dashboard.index',compact('meja', 'barang'));
     }
 
     /**
