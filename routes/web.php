@@ -5,6 +5,8 @@ use App\Http\Controllers\Manager\Crud\MejaController as CrudMejaController;
 use App\Http\Controllers\Manager\Crud\PetugasController as CrudPetugasController;
 use App\Http\Controllers\Manager\DashboardContoller as ManagerDashboardController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Kasir\DashboardController as KasirDashboardController;
+use App\Http\Controllers\Kasir\TransaksiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -38,4 +40,8 @@ Route::name('manager.')->prefix('manager')->group(function(){
 
 Route::name('admin.')->prefix('admin')->group(function(){
     Route::resource('dashboard',AdminDashboardController::class)->middleware(['auth','role:admin']);
+});
+Route::name('kasir.')->prefix('kasir')->group(function(){
+    Route::resource('dashboard',KasirDashboardController::class)->middleware(['auth','role:kasir']);
+    Route::get('transaksi/new',[TransaksiController::class,'index'])->name('transaksi.index')->middleware(['auth','role:kasir']);
 });

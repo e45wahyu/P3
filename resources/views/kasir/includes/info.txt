@@ -1,0 +1,2 @@
+- folder buat partial, part untuk web master kasir nya
+- contoh kayak navbar, sidebar, script, style, dan lain nya

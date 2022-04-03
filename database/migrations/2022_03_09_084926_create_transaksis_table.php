@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('orderid');
             $table->string('koderorder');
             $table->string('totalhargabayar');
-            $table->string('totaldibayar');
+            $table->string('totaldibayar')->nullable();
             $table->string('metodepembayaran');
             $table->string('pdfurl')->nullable();
             $table->unsignedBigInteger('petugasid');

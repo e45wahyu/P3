@@ -37,6 +37,11 @@ class HomeController extends Controller
                 $barang = Barang::count();
                 return redirect('/manager/dashboard',);
             }
+            if (auth()->user()->role == 'kasir') {
+                $meja = Meja::count();
+                $barang = Barang::count();
+                return redirect('/kasir/dashboard',);
+            }
         }else {
             # code...
             return redirect('/');
