@@ -16,10 +16,14 @@ return new class extends Migration
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
             $table->string('transaksiid');
+            $table->string('orderid');
             $table->string('koderorder');
             $table->string('totalhargabayar');
             $table->string('totaldibayar');
             $table->string('metodepembayaran');
+            $table->string('pdfurl')->nullable();
+            $table->unsignedBigInteger('petugasid');
+            $table->foreign('petugasid')->references('id')->on('users');
             $table->enum('status',['success','failed','denied','expired','canceled','deleted']);
             $table->timestamps();
         });

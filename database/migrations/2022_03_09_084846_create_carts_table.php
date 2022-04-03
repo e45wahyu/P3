@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('userid');
-            $table->foreign('userid')->references('id')->on('users');
+            $table->unsignedBigInteger('petugasid');
+            $table->foreign('petugasid')->references('id')->on('users');
             $table->unsignedBigInteger('barangid');
             $table->foreign('barangid')->references('id')->on('barangs');
             $table->integer('quantity');
