@@ -56,7 +56,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../layout/boxed.html" class="nav-link">
+                            <a href="{{ route('manager.petugas.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Petugas</p>
                             </a>

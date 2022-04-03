@@ -1,2 +1,2 @@
-- folder buat partial, part untuk web master manager nya
+- folder buat partial, part untuk web master admin nya
 - contoh kayak navbar, sidebar, script, style, dan lain nya

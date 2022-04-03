@@ -1,10 +1,9 @@
 <?php
 
-// use App\Http\Controllers\BarangController;
 use App\Http\Controllers\Manager\Crud\BarangController as CrudBarangController;
 use App\Http\Controllers\Manager\Crud\MejaController as CrudMejaController;
+use App\Http\Controllers\Manager\Crud\PetugasController as CrudPetugasController;
 use App\Http\Controllers\Manager\DashboardContoller as ManagerDashboardController;
-// use App\Http\Controllers\Admin\DashboardContoller as AdminDashboardContoller;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -34,10 +33,9 @@ Route::name('manager.')->prefix('manager')->group(function(){
     Route::resource('dashboard',ManagerDashboardController::class)->middleware(['auth','role:manager']);
     Route::resource('meja',CrudMejaController::class)->middleware(['auth','role:manager']);
     Route::resource('barang',CrudBarangController::class)->middleware(['auth','role:manager']);
+    Route::resource('petugas',CrudPetugasController::class)->middleware(['auth','role:manager']);
 });
 
 Route::name('admin.')->prefix('admin')->group(function(){
     Route::resource('dashboard',AdminDashboardController::class)->middleware(['auth','role:admin']);
-    Route::resource('meja',CrudMejaController::class)->middleware(['auth','role:admin']);
-    Route::resource('barang',CrudBarangController::class)->middleware(['auth','role:admin']);
 });
