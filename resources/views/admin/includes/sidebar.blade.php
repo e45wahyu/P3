@@ -44,34 +44,18 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('manager.meja.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Meja</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('manager.barang.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Menu</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="../layout/boxed.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Petugas</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="../layout/boxed.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Log Activity</p>
+                            </a>
+                        </li>
                     </ul>
-                </li>
-                <li class="nav-header">Transaksi</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>
-                            Laporan
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
                 </li>
             </ul>
         </nav>

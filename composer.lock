@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94c8d29a8b898014ffd03b688276d8b2",
+    "content-hash": "2ddf3ec67a4022cbceccad074a0bd283",
     "packages": [
         {
             "name": "brick/math",
@@ -368,6 +368,66 @@
                 }
             ],
             "time": "2022-01-18T15:43:28+00:00"
+        },
+        {
+            "name": "dzaki236/logging-services",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dzaki236/logging-services.git",
+                "reference": "f1ed826657d546cf10d07e3a320b692a74daa889"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dzaki236/logging-services/zipball/f1ed826657d546cf10d07e3a320b692a74daa889",
+                "reference": "f1ed826657d546cf10d07e3a320b692a74daa889",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.7",
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Dzaki236\\LoggingServices\\LoggingServicesServiceProvider"
+                    ],
+                    "aliases": {
+                        "Logging": "Dzaki236\\LoggingServices\\LoggingServices"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dzaki236\\LoggingServices\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "dzaki236",
+                    "email": "dzakiahnafz@gmail.com"
+                }
+            ],
+            "description": "Library for simplify logging laravel and manage log txt, Simple to use, based on data",
+            "keywords": [
+                "laravel",
+                "laravel-logging",
+                "log",
+                "logging-laravel",
+                "logging-services",
+                "php",
+                "php-logging"
+            ],
+            "support": {
+                "issues": "https://github.com/dzaki236/logging-services/issues",
+                "source": "https://github.com/dzaki236/logging-services/tree/2.0.2"
+            },
+            "time": "2022-03-26T00:49:10+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -7801,5 +7861,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.2.0"
 }
