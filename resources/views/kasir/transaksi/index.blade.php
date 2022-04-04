@@ -41,9 +41,9 @@
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="card">
             <div class="card-body">
-                @foreach ( as $item)
+                {{-- @foreach ( as $item)
                     
-                @endforeach
+                @endforeach --}}
             </div>
         </div>
     </div>
